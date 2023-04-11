@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./navbar.css";
 import { AiFillCloseCircle, AiOutlineMenu } from "react-icons/ai"
 
 const Navbar = () => {
+  const [active, setActive] = useState('navbar');
+  const ShowMenu = () => {
+    if(active === 'navbar'){
+      setActive('navbar displayMenu')
+    }else{
+      setActive('navbar')
+    }
+  }
+
   return (
     <header className="header">
       <div className="logo">
@@ -34,11 +43,11 @@ const Navbar = () => {
         </ul>
 
         <div className="closeNavbarIcon">
-          <AiFillCloseCircle />
+          <AiFillCloseCircle className="icon" />
         </div>
       </div>
 
-      <div className="toggleNavbarIcon">
+      <div onClick={ShowMenu} className="toggleNavbarIcon">
         <AiOutlineMenu className="icon" />
       </div>
     </header>

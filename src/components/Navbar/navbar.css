@@ -5,12 +5,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 2rem;
-    background: aqua;
+    background: rgb(2, 66, 66);
 }
 .icon{
     font-size: 26px;
     font-weight: 500;
     cursor: pointer;
+    color: white;
 }
 .navbar{
 
@@ -19,4 +20,51 @@
     display: flex;
     align-items: center;
     column-gap: 1rem;
+}
+.NavLink{
+    color: white;
+    font-size: 18px;
+     font-weight: 500;
+     padding: 10px;
+     border-radius: 1rem;
+}
+.logo{
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+}
+
+.closeNavbarIcon, .toggleNavbarIcon{
+    display: none;
+}
+
+@media screen and ( max-width: 768px){
+    .toggleNavbarIcon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        padding: 1rem;
+        height: max-content;
+        width: 80%;
+        background-color: aqua;
+        border-radius: 1rem;
+        right: 50%; left: 50%;
+        transform: translate(-50%);
+        top: -500%;
+        transition: .3s ease;
+    }
+    .navMenu{
+        flex-direction: column;
+    }
+    .navItem{
+        padding: 0.5rem 0;
+    }
+    .closeNavbarIcon{
+        position: absolute;
+        top: 5%; right: 5%;
+    }
+    .displayMenu{
+        top: 6rem;
+    }
 }
