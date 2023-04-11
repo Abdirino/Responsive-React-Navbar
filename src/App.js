@@ -1,12 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/Home";
+import About from "./components/About"
+import Services from "./components/Services"
+import Contact from "./components/Contact"
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      
-    </div>
-  );
+    <>
+      <Navbar />
+      <Home />
+      <About />
+      <Services />
+      <Contact />
+    </>
+  )
 }
 
-export default App;
+export default App

@@ -1,0 +1,14 @@
+.header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: aqua;
+}
+.icon{
+    font-size: 26px;
+    font-weight: 500;
+    cursor: pointer;
+}
